@@ -1,0 +1,25 @@
+<header>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</header>
+
+<div class="centered">
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><%= @task.completed %></p>
+<br>
+<br>
+<br>
+<br>
+<% task_id = @task.id %> 
+<div class="center">
+<a href="http://localhost:3000/tasks/<%= task_id %>/edit" class="btn-home" role="button" aria-disabled="true"><p>Edit</p></a>
+<br><br><br><br><br>
+<a href="http://localhost:3000/tasks" class="btn-home" role="button" aria-disabled="true"><p>Home</p></a>
+</div>
+</div>
+
+
+<%= link_to "Delete #{@task.title}",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>

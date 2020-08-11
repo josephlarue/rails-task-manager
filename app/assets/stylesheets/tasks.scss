@@ -1,0 +1,76 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.centered {
+
+    text-align: center;
+
+}
+
+.flex {
+    display: flex;
+	justify-content: space-between;
+	
+}
+
+li{
+
+    padding: 10px 25px;
+
+}
+
+span {
+
+    width : 35px;
+
+}
+
+.btn-home {
+    position: fixed;
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+    color: purple;
+    text-decoration: none;
+	width: 100px;
+    height: 30px;
+    
+	border-radius: 30px;
+	box-shadow: 
+		0px 0px 0px 15px hsl(330, 80%, 50%),
+		0px 10px 0px 15px hsl(330, 80%, 40%),
+		0px 20px 20px 15px #0003;
+	border-radius: 100px 30px 100px 30px;
+}
+
+.btn-home p {
+	margin-top: 7px;
+	transform: rotate(-3deg);
+}
+
+.btn-home:hover {
+	animation: .8s morph ease infinite;
+}
+
+.btn-home:hover p {
+	animation: .8s rot ease infinite;
+}
+
+@keyframes morph {
+	0% {
+		border-radius: 100px 30px 100px 30px;
+	} 50% {
+		border-radius: 30px 100px 30px 100px;
+	} 100% {
+		border-radius: 100px 30px 100px 30px;
+	}
+}
+
+@keyframes rot {
+	0% {
+		transform: rotate(-3deg);
+	} 50% {
+		transform: rotate(3deg);
+	} 100% {
+		transform: rotate(-3deg);
+	}
+}
